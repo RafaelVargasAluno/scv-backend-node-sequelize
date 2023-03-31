@@ -10,6 +10,9 @@ class Cidade extends Model {
           notEmpty: { msg: "Nome da Cidade deve ser preenchida!" },
           len: { args: [2, 50], msg: "Nome da Cidade deve ter entre 2 e 50 letras!" }
         }
+      },
+      descricao: { 
+        type: DataTypes.STRING
       }
     }, { sequelize, modelName: 'cidade', tableName: 'cidades' })
   }
